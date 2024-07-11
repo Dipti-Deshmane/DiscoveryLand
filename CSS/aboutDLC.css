@@ -1,0 +1,283 @@
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body, html {
+        height: 100%;
+        width: 100%;
+        font-family: Arial, sans-serif;
+    }
+*, *::before, *::after {
+    box-sizing: inherit; /* Inherit box-sizing for all elements */
+}
+
+.backgroundImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the background image stays behind other elements */
+}
+
+.backgroundImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire area */
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust as needed for spacing */
+    position: relative;
+    z-index: 1; /* Ensure the header is above the background image */
+}
+#logo {
+    max-width: 100px; /* Adjust as needed */
+    height: auto;
+}
+
+nav.head {
+    display: flex;
+    align-items: center;
+}
+
+nav.head ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav.head ul.lis li {
+    margin-left: 20px; /* Adjust as needed for spacing between links */
+}
+
+nav.head ul.lis li a {
+    text-decoration: none;
+    color: white; /* Adjust as needed */
+    font-size: 1em; /* Adjust as needed */
+    padding: 10px; /* Adjust as needed */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav.head ul.lis li a:hover {
+    color: #ddd; /* Adjust as needed */
+}
+
+nav.head span {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the span to the right end */
+}
+
+svg {
+    fill: white; /* Adjust as needed */
+}
+
+.mono{
+        position: absolute;
+        bottom: 40%;
+        left: 20%; /* Adjusted left margin */
+        color: white; /* Text color for mono */
+        font-size:50px; /* Adjusted font size */
+        z-index: 10; 
+        width: 40%;
+        font-family: monospace;
+
+    }
+
+    
+    .backgroundImg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(100, 89, 89, 0.5); /* Semi-transparent grey overlay */
+        z-index: 1; /* Ensure overlay is behind other content */
+    }
+    .aboutpart1{
+    margin-bottom: 50%;
+    }
+    .aboutpart2{
+        position: relative;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+    .aboutpart2 div{ 
+      
+        display: block;
+        text-align: center;
+        position: relative;
+        margin-bottom: 20px;
+        opacity: 1;
+        font-size: 35px;
+        font-family: initial;
+    }
+
+    .aboutpart3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        padding: 10%;
+        box-sizing: border-box;
+        margin-bottom: 5%;
+    }
+    
+    .aboutpart3 img {
+        flex: 1;
+        height: auto;
+        width: 40%; 
+        object-fit: cover;
+    }
+    
+    .intentionbox {
+        flex: 1;
+        box-sizing: border-box;
+    }
+    
+    .intentionbox h2 {
+        text-align: left;
+        font-size: larger;
+        margin-bottom: 5% ;
+        font-family: Arial;
+       color: #413839;
+
+    }
+    .part3text  div {
+        text-align: left;
+        font-family: calibri;
+        font-weight: none;
+        margin-bottom: 2%;
+        font-size: medium;
+        color: grey;
+    }
+    
+    .aboutpart4 {
+        width: 100vw;
+        overflow: hidden;
+        padding: 5%;
+
+        }
+
+    .aboutpart4 h3{
+        font-size: xx-large;
+        font-family: math;
+        color: #4C4646;
+    }
+    .Imgslide {
+        display: flex;
+        overflow: hidden;
+        width: 100vw; /* Ensure it takes up full width of the viewport */
+        
+    }
+    
+    .Imgslide-track {
+        display: flex;
+        width: calc(18vw * 10); /* Adjust to the total width of all images (original + duplicated) */
+        animation: slide 20s linear infinite;
+        
+    }
+    
+    .img {
+        width: 30vw;
+        height: 70vh;
+        padding: 0.3%;
+        flex-shrink: 0;
+
+        object-fit: cover;
+    }
+    
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-18vw * 5)); /* Slide the width of the original images */
+        }
+    }
+    .backgroundImg1{
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        overflow:hidden; 
+     
+
+    }   
+    .backgroundImg1 img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover; 
+        
+    }
+    .aboutpart5{
+        padding-bottom: 5%;
+    }
+    .aboutpart6{
+        overflow-x: hidden;
+        padding-bottom: 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; /* Aligns the items at the start of the container */
+        margin: 20px;
+      
+    }
+    .dlc-vid__vid-wrap {
+        position: relative;
+        width: 80%;
+        max-width: 800px;
+    }
+    .leftside {
+        flex: 1;
+        margin-right: 20px; /* Adds space between the left and right sides */
+      }
+      
+      .rightside {
+        flex: 3; /* Adjust the flex value to control the width ratio */
+      }
+      
+      .leftside h2 {
+        margin: 0;
+      }
+      
+      .rightside div {
+        margin-bottom: 10px; /* Adds space between the comments */
+      }
+    
+    .videoAbout{
+        width: 100vw;
+        height: auto;
+        display: block;
+    }
+    
+    .overlay-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .dlc-vid-play__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px 20px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 2;
+    }
+    
